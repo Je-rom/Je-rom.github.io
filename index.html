@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Hero Section Project</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="brand">
+    <img src="./images/logo.svg" alt="Logo">
+  </a>
+
+  <a href="#" class="ham">
+    <img src="./images/icon-menu.svg" alt="ham">
+  </a>
+
+  <div class="nav-ul">
+
+    <div class="dropdown">
+      <a class="dropbtn">
+        Features <img src="./images/icon-arrow-up.svg" alt="arrow-p">
+      </a>
+      <div class="dropdown-content">
+        <a href="#"><img src="./images/icon-todo.svg" alt=""/> TodoList </a>
+        <a href="#"><img src="./images/icon-calendar.svg" alt=""/> Calender </a>
+        <a href="#"><img src="./images/icon-reminders.svg" alt=""/> reminders </a>
+        <a href="#"><img src="./images/icon-planning.svg" alt=""/> Planing </a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn">
+        Company <img src="./images/icon-arrow-up.svg" alt="arrow-up">
+      </a>
+      <div class="dropdown-content">
+        <a href="#">History</a>
+        <a href="#">Our Team</a>
+        <a href="#">Blog</a>
+      </div>
+    </div>
+
+    <a href="#">Careers</a>
+    <a href="#">About</a>
+  </div>
+
+  <div class="nav-btns">
+    <button><a href="#">Login</a></button>
+    <button><a href="#">Register</a></button>
+  </div>
+
+</nav>
+
+<div class="overlay">
+
+  <div class="mobile-res">
+    <img src="./images/icon-close-menu.svg" id="close-Menu">
+    <div class="mobile-res-con">
+
+      <div class="dropdown">
+        <div class="dropbtn">
+          Features <img src="./images/icon-arrow-up.svg" alt="arrow-up">
+        </div>
+        <div class="dropdown-content">
+          <a href="#"><img src="./images/icon-todo.svg" alt=""/> TodoList </a>
+          <a href="#"><img src="./images/icon-calendar.svg" alt=""/> Calender </a>
+          <a href="#"><img src="./images/icon-reminders.svg" alt=""/> reminders </a>
+          <a href="#"><img src="./images/icon-planning.svg" alt=""/> Planing </a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">
+          Company <img src="./images/icon-arrow-up.svg" alt="arrow-up">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">History</a>
+          <a href="#">Our Team</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+
+    <a href="#">Careers</a>
+    <a href="#">About</a>
+
+    <a href="#" class="lol">Login</a>
+    <button class="reg"><a href="#">Register</a></button>
+
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Make <br /> remote work</h1>
+    <p>Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.</p>
+
+    <button>Learn More</button>
+
+    <div class="logos">
+      <img src="./images/client-databiz.svg" alt="">
+      <img src="./images/client-audiophile.svg" alt="">
+      <img src="./images/client-meet.svg" alt="">
+      <img src="./images/client-maker.svg" alt="">
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./images/image-hero-desktop.png" id="hero-img">
+  </div>
+</div>
+
+<script>
+  const ham = document.querySelector('.ham')
+  ham.addEventListener('click', e=>{
+    document.querySelector('.mobile-res').classList.add('show')
+    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('body').classList.add('lock')
+  })
+  document.querySelector('#close-Menu').addEventListener('click', e =>{
+    document.querySelector('.mobile-res').classList.remove('show')
+    document.querySelector('.overlay').style.display = 'none'
+    document.querySelector('body').classList.remove('lock')
+  })
+</script>
+  
+</body>
+</html>
